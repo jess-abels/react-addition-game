@@ -1,0 +1,14 @@
+body {
+    background-image: url('../assets/images/cat-background-landing.png');
+    background-size: cover;
+    height: 100vh;
+    background-position:center;
+  }
+
+#welcome-text{
+  background-color: white;
+  color: black;
+  h1 {
+    padding: 20px;
+  }
+}
