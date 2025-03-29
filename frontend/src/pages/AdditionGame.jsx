@@ -1,9 +1,17 @@
 import './AdditionGame.css'
+import MathProblem from '../components/MathProblem'
+import CounterBox from '../components/CounterBox'
+import AnswerBox from '../components/AnswerBox'
 
 export default function AdditionGame(){
     return (
         <div id="game">
-        <h1>LET'S BEGIN!</h1>
+        <MathProblem/>
+        <div className="counter-container">
+        <CounterBox/>
+        <CounterBox/>
+        </div>
+        <AnswerBox/>
        </div>
     )
 }
