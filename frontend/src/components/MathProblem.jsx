@@ -1,9 +1,12 @@
 import './MathProblem.css'
 
-export default function AdditionGame(){
+export default function AdditionGame(props){
+    console.log(props);
+    
+    let {num1,num2} = props;
     return (
         <div className="math">
-        <h1>4 + 1 = ? </h1>
+        <h1>{num1} + {num2} = ? </h1>
        </div>
     )
 }

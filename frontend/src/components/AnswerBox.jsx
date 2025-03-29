@@ -3,14 +3,15 @@ import './AnswerBox.css'
 export default function AnswerBox(){
     return (
         <div>
+            <h2>How many cats are there altogether?</h2>
         <div>
-           Answer Option 1
+           <button>4</button>
        </div>
            <div>
-           Answer Option 2
+           <button> 2</button>
        </div>
            <div>
-           Answer Option 3
+           <button>9</button>
        </div>
        </div>
     )
