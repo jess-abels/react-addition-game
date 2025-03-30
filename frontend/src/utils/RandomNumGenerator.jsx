@@ -6,7 +6,7 @@ export function getRandomIntInclusive(min, max) {
   }
 
   export function getRandomNumsEqualLessThanOrEqualToTen() {
-    const firstNumber = Math.floor(Math.random() * 10); // Generates a random integer between 0 and 10
-    const secondNumber = Math.floor(Math.random() * (10 - firstNumber)); // Generates a random integer between 0 and (10 - firstNumber)
+    const firstNumber = getRandomIntInclusive(1,10);
+    const secondNumber = getRandomIntInclusive(1, 10 - firstNumber)
     return [firstNumber, secondNumber];
   }
