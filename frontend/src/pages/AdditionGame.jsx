@@ -2,11 +2,11 @@ import './AdditionGame.css'
 import MathProblem from '../components/MathProblem'
 import CounterBox from '../components/CounterBox'
 import AnswerBox from '../components/AnswerBox'
-import { getRandomIntInclusive } from '../utils/RandomNumGenerator'
+import { getRandomNumsEqualLessThanOrEqualToTen } from '../utils/RandomNumGenerator'
 
 export default function AdditionGame(){
-    let randomNum1 = getRandomIntInclusive(0,10)
-    let randomNum2 = getRandomIntInclusive(0,10)
+    let [randomNum1, randomNum2] = getRandomNumsEqualLessThanOrEqualToTen();
+    let sum = randomNum1 + randomNum2;
 
     return (
         <div id="game">
@@ -15,7 +15,7 @@ export default function AdditionGame(){
         <CounterBox num={randomNum1}/>
         <CounterBox num={randomNum2}/>
         </div>
-        <AnswerBox/>
+        <AnswerBox correctAnswer={sum}/>
        </div>
     )
 }
