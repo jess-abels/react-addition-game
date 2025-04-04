@@ -12,11 +12,21 @@ export function getRandomIntInclusive(min, max) {
   }
 
   export function getThreeUniqueAnswerOptions(correctAnswer){
-    let answerOptions = [correctAnswer];
+    let answerOptions;
     do {
-        answerOptions.push(getRandomIntInclusive(1,10));
-        answerOptions = [...new Set(answerOptions)]
-    } while (answerOptions.length < 3);
-    return answerOptions;
+        answerOptions = new Set(answerOptions)
+        answerOptions.add(getRandomIntInclusive(1,10));
+        answerOptions.add(correctAnswer)
+    } while (answerOptions.size < 3);
+
+    return Array.from(answerOptions);
   }
 
+  export function shuffleSet(set) {
+    const array = Array.from(set);
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return new Set(array);
+  }
